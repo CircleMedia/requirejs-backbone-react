@@ -5,7 +5,6 @@ require.config({
         jquery: '../bower_components/jquery/dist/jquery',
         backbone: '../bower_components/backbone/backbone',
         underscore: '../bower_components/lodash/dist/lodash',
-        bootstrap: '../bower_components/sass-bootstrap/dist/js/bootstrap',
         react: '../bower_components/react/react-with-addons',
         JSXTransformer: '../bower_components/react/JSXTransformer',
         jsx: '../bower_components/requirejs-react-jsx/jsx',

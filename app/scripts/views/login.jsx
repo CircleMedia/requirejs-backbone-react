@@ -4,10 +4,9 @@ define([
     'use strict';
     var React = require('react');
 
-    var View = React.createClass({
+    var View = ReactClasses.Login = React.createClass({
 
         render: function() {
-
             return  <div className="single-widget-container">
                         <section className="widget login-widget">
                             <header className="text-align-center">
@@ -59,29 +58,5 @@ define([
         }
     });
 
-    React.render(
-        <View />, document.getElementById('body_container'));
-
-    /*
-    function App() {
-        this.View = React.createClass({
-            render: function () {
-                return (
-                <div>
-                <p>Hello, Oleg Kolomiets!</p>
-                </div>
-                );
-            }
-        });
-    }
-
-    App.prototype.init = function (element) {
-        React.render(
-            <this.View />,
-            document.getElementById(element)
-        );
-    };
-
-    return App;
-    */
+    return View;
 });

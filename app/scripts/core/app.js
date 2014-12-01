@@ -1,10 +1,17 @@
 define([
     'jquery',
     'underscore',
-    'backbone'
+    'backbone',
+    'react'
 ], function () {
     'use strict';
-
+    $.ajaxSetup({
+        xhrFields:{
+            // Enables CORS for all ajax calls.
+            withCredentials: true
+        }
+    });
+    var React = require('react');
     var app = {
         Models: {},
         Collections: {},
@@ -31,7 +38,6 @@ define([
             }
             app.core.router = new app.Routers.Main();
             app.$appContainer = $('#body_container');
-            app.appContainer = 'body_container';
             app.$appContainer.on('click','a',function(e){
                 if($(this).attr('href')=='#') e.preventDefault();
             });
@@ -72,10 +78,11 @@ define([
                 app.currentView = new Class(args);
                 app.$appContainer.append(app.currentView.el);
             },
-            switchToReactView: function(View){
+            switchToReactView: function(View,args){
+                var container = app.$appContainer[0];
+                React.unmountComponentAtNode(container);
                 require(['jsx!views/'+View], function(view){
-                    //var ReactView = new view();
-                    //ReactView.init(app.appContainer);
+                    React.render(React.createElement(view, args), container);
                 });
             },
             storage: {
@@ -175,6 +182,6 @@ define([
         helpers: {}
 
     };
-
+    window.ReactClasses = {};
     return app;
 });
