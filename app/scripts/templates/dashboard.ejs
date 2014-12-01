@@ -1,0 +1,122 @@
+<div class="logo">
+    <h4><a href="#">Circle <strong>Media</strong></a></h4>
+</div>
+<nav id="sidebar" class="sidebar nav-collapse collapse">
+    <ul id="side-nav" class="side-nav">
+        <li>
+            <a href="#dashboard"><i class="icon-bar-chart"></i> <span class="name">Summary</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="icon-bookmark-empty"></i> <span class="name">Tags</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="icon-reorder"></i> <span class="name">Lists</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="icon-group"></i> <span class="name">Fans</span></a>
+        </li>
+    </ul>
+</nav>
+<div class="wrap">
+    <header class="page-header">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav pull-right">
+                    <li class="hidden-phone dropdown">
+                        <a href="#" title="Account" id="account" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-user"></i>
+                        </a>
+                        <ul id="account-menu" class="dropdown-menu account" role="menu">
+                            <li role="presentation" class="account-picture">
+                                <img src="img/2.jpg" alt="" />
+                                Philip Daineka
+                            </li>
+                            <li role="presentation">
+                                <a href="form_account.html" class="link">
+                                    <i class="icon-user"></i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="component_calendar.html" class="link">
+                                    <i class="icon-calendar"></i>
+                                    Calendar
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="link">
+                                    <i class="icon-inbox"></i>
+                                    Inbox
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="visible-phone">
+                        <a href="#" class="btn-navbar" data-toggle="collapse" data-target=".sidebar" title="">
+                            <i class="icon-reorder"></i>
+                        </a>
+                    </li>
+                    <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
+                </ul>
+            </div><!-- /navbar-inner -->
+        </div>
+    </header>
+    <div class="content container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <h2 class="page-title">Summary</h2>
+            </div>
+        </div>
+        <div id="searchresults">
+        </div>
+
+        <div class="row-fluid">
+            <div class="span3">
+                <section class="widget large">
+                    <header>
+                        <h4><i class="icon-home"></i> Top sources</h4>
+                    </header>
+                    <div class="body">
+                        <div id="sources-chart-pie" class="chart pie-chart">
+                            <svg></svg>
+                        </div>
+                    </div>
+                    <footer id="data-chart-footer" class="pie-chart-footer">
+                    </footer>
+                </section>
+            </div>
+            <div class="span9 half-width-responsive">
+                <section class="widget large">
+                    <header>
+                        <h4><i class="icon-bar-chart"></i> Bar Chart <small class="hidden-phone">Refresh page to see different data</small></h4>
+                    </header>
+                    <div id="sources-chart-bar" class="body chart">
+                        <svg></svg>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span6">
+                <section class="widget large">
+                    <header>
+                        <h4><i class="icon-bullhorn"></i> Stream Stacked Chart</h4>
+                    </header>
+                    <div id="sources-chart-stacked" class="body chart">
+                        <svg></svg>
+                    </div>
+                </section>
+            </div>
+            <div class="span6">
+                <section class="widget large">
+                    <header>
+                        <h4><i class="icon-circle-arrow-right"></i> Line Chart</h4>
+                    </header>
+                    <div id="sources-chart-line" class="body chart">
+                        <svg></svg>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
