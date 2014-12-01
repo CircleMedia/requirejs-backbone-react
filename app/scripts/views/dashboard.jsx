@@ -28,7 +28,7 @@ define([
             }
             return {
                 data: data,
-                categoriesObject: new Backbone.Collection(data.categories),
+                categoriesObject: data.categories,
                 seriesObject: new Backbone.Collection(data.series),
                 chartObject: {
                     chart: {

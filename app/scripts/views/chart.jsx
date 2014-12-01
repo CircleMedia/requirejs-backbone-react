@@ -33,7 +33,7 @@ define([
 
         initializeChart: function () {
             var chartModel = this.props.chartModel;
-            var categoriesModel = this.props.categoriesModel.toJSON();
+            var categoriesModel = this.props.categoriesModel;
             var seriesModel = this.props.seriesModel.toJSON();
             var width = this.props.width || null;
             var height = this.props.height || null;
