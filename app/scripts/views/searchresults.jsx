@@ -1,17 +1,21 @@
 define([
     'backbone',
-    'react'
+    'react',
+    'core/helpers'
 ], function() {
     'use strict';
     var React = require('react');
+    var h = require('core/helpers');
 
     var View = ReactClasses.Searchresults = React.createClass({
         render: function () {
+            var search = h.formatCommas(this.props.data.iTotalDisplayRecords);
+            var total = h.formatCommas(this.props.data.iGlobalRecords);
             return (
                 <div className="row-fluid box-row">
                     <div className="span2">
                         <div className="box">
-                            <div className="big-text">{this.props.data.iTotalDisplayRecords}</div>
+                            <div className="big-text">{search}</div>
                             <div className="description">Search</div>
                         </div>
                     </div>
@@ -23,7 +27,7 @@ define([
                     </div>
                     <div className="span2">
                         <div className="box">
-                            <div className="big-text">{this.props.data.iGlobalRecords}</div>
+                            <div className="big-text">{total}</div>
                             <div className="description">Total Fans</div>
                         </div>
                     </div>

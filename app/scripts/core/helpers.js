@@ -22,7 +22,7 @@ define([
         return o;
     };
 
-    var h = app.helpers;
+    var h = {};
     h.validationError = function (options) {
         var $elem = $(options.target);
         var classes = 'qtip-validation' + (options.classes ? ' ' + options.classes : '');
@@ -73,4 +73,13 @@ define([
             });
         }
     }
+
+    h.formatCommas = function(nStr) {
+        nStr += ''; var x = nStr.split('.'); var x1 = x[0]; var x2 = x.length > 1 ? '.' + x[1] : '';
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) { x1 = x1.replace(rgx, '$1' + ',' + '$2'); }
+        return x1 + x2;
+    };
+
+    return h;
 });
