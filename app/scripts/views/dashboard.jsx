@@ -11,9 +11,6 @@ define([
     var React = require('react');
     var data1 = require('collections/data1');
     var data2 = require('collections/data2');
-    var data = [];
-    data.push(data1);
-    data.push(data2);
 
     var View = ReactClasses.DashboardView = React.createClass({
 
@@ -21,12 +18,13 @@ define([
             return {
                 isDataset1: true,
                 isDataset2: false,
-                data: data[0]}
+                data: data1
+            }
         },
 
         handleUserInput: function(isDataset1, isDataset2) {
             this.setState({
-                data: isDataset1 ? data[0] : data[1],
+                data: isDataset1 ? data1 : data2,
                 isDataset1: isDataset1,
                 isDataset2: isDataset2
             });

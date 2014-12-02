@@ -12,6 +12,13 @@ define([
             );
         },
         render: function () {
+            var input1 = this.props.isDataset1 ?
+                <input type="radio" name="dataset" ref="dataset1Input" value={this.props.isDataset1} className="uniform" onChange={this.handleChange} checked/> :
+                <input type="radio" name="dataset" ref="dataset1Input" value={this.props.isDataset1} className="uniform" onChange={this.handleChange} />
+            var input2 = this.props.isDataset2 ?
+                <input type="radio" name="dataset" ref="dataset2Input" value={this.props.isDataset2} className="uniform" onChange={this.handleChange} checked/> :
+                <input type="radio" name="dataset" ref="dataset2Input" value={this.props.isDataset2} className="uniform" onChange={this.handleChange} />
+
             return (
                 <div className="row-fluid">
                     <div className="span4">
@@ -21,10 +28,10 @@ define([
                                     <label className="control-label">Data set</label>
                                     <div className="controls">
                                         <label className="radio inline">
-                                            <input type="radio" name="dataset" ref="dataset1Input" value={this.props.isDataset1} className="uniform" onChange={this.handleChange} />
+                                            {input1}
                                         1</label>
                                         <label className="radio inline">
-                                            <input type="radio" name="dataset" ref="dataset2Input" value={this.props.isDataset2} className="uniform" onChange={this.handleChange} />
+                                            {input2}
                                         2 </label>
                                     </div>
                                 </div>
