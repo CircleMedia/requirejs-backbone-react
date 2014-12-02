@@ -20,7 +20,7 @@ define([
             if (chartModel !== nextChartModel
                 || width !== nextWidth
                 || height !== nextHeight) {
-                this.state.chartInstance.destroy();
+                //this.state.chartInstance.destroy();
                 this.initializeChart();
             }
         },
