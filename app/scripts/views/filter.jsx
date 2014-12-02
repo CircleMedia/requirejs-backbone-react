@@ -22,21 +22,30 @@ define([
             return (
                 <div className="row-fluid">
                     <div className="span4">
-                        <form className="form-horizontal">
-                            <fieldset>
-                                <div className="control-group">
-                                    <label className="control-label">Data set</label>
-                                    <div className="controls">
-                                        <label className="radio inline">
-                                            {input1}
-                                        1</label>
-                                        <label className="radio inline">
-                                            {input2}
-                                        2 </label>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
+                        <section className="widget">
+                            <header>
+                                <h4>
+                                    <i className="icon-check"></i> Filters
+                                </h4>
+                            </header>
+                            <body>
+                                <form className="form-horizontal">
+                                    <fieldset>
+                                        <div className="control-group">
+                                            <label className="control-label">Data set</label>
+                                            <div className="controls">
+                                                <label className="radio inline">
+                                                    {input1}
+                                                1</label>
+                                                <label className="radio inline">
+                                                    {input2}
+                                                2 </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </body>
+                        </section>
                     </div>
                 </div>
             );
