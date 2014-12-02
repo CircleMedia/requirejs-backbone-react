@@ -9,7 +9,9 @@ define([
 
         routes: {
             "dashboard": "dashboard",
-            "login": "login"
+            "login": "login",
+            "summary": "dashboard",
+            "fans": "profiles"
             //"entitlements(/:page)": "entitlements",
             //"entitlement/:entitlementId": "entitlement",
             //"api/entitlement/json(/:query)": "entitlement_list",
@@ -22,7 +24,11 @@ define([
         },
 
         login: function () {
-            app.core.switchToReactView('login');
+            app.core.switchToReactView('login', {});
+        },
+
+        profiles: function ( ){
+            app.core.switchToReactView('profiles');
         }
 
 

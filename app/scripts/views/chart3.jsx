@@ -7,12 +7,12 @@ define([
     'use strict';
     var React = require('react');
 
-    var View = ReactClasses.Chart = React.createClass({
+    var View = ReactClasses.Chart3 = React.createClass({
         mixins: [Backbone.React.Component.mixin],
 
         componentWillReceiveProps: function (nextProps) {
-            var chartModel = this.props.chartModel;
-            var nextChartModel = nextProps.chartModel;
+            var chartModel = this.props.data.model;
+            var nextChartModel = nextProps.model;
             var width = this.props.width;
             var nextWidth = nextProps.width;
             var height = this.props.height;
@@ -32,9 +32,8 @@ define([
         },*/
 
         initializeChart: function () {
-            var chartModel = this.props.chartModel;
-            var categoriesModel = this.props.categoriesModel;
-            var seriesModel = this.props.seriesModel.toJSON();
+            var chartModel = this.props.data.model;
+            var seriesModel = this.props.data.series;
             var width = this.props.width || null;
             var height = this.props.height || null;
             var selector = this.refs.myChart.getDOMNode();
@@ -44,9 +43,6 @@ define([
                     renderTo: {$set: selector},
                     width: {$set: width},
                     height: {$set: height}
-                },
-                xAxis: {
-                    categories: {$set: categoriesModel}
                 },
                 series: {$set: seriesModel}
             });
