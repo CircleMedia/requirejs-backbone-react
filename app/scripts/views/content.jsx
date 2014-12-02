@@ -18,7 +18,7 @@ define([
                             <h2 className="page-title">Summary</h2>
                         </div>
                     </div>
-                    <ReactClasses.Searchresults />
+                    <ReactClasses.Searchresults data={this.props.data.searchresults}/>
 
                     <div className="row-fluid">
                         <div className="span3">
