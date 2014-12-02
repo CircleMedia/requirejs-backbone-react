@@ -4,7 +4,8 @@ define([
     'jsx!views/searchresults',
     'jsx!views/chart1',
     'jsx!views/chart2',
-    'jsx!views/chart3'
+    'jsx!views/chart3',
+    'jsx!views/filter'
 ], function() {
     'use strict';
     var React = require('react');
@@ -18,6 +19,7 @@ define([
                             <h2 className="page-title">Summary</h2>
                         </div>
                     </div>
+                    <ReactClasses.Filter isDataset2={this.props.isDataset2} isDataset1={this.props.isDataset1} onUserInput={this.props.onUserInput}/>
                     <ReactClasses.Searchresults data={this.props.data.searchresults}/>
 
                     <div className="row-fluid">

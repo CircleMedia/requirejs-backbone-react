@@ -13,9 +13,8 @@ define([
 
             // temporary accordion page for demo
             var content = this.props.data ?
-                <ReactClasses.Content data={this.props.data}/> :
+                <ReactClasses.Content isDataset2={this.props.isDataset2} isDataset1={this.props.isDataset1} data={this.props.data} onUserInput={this.props.onUserInput}/> :
                 <ReactClasses.Tables />
-            console.log(this.props.data ? 'wrapper content' : 'wrapper accordion');
             return (
                 <div className="wrap">
                     <ReactClasses.Header />
